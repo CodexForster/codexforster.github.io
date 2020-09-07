@@ -34,18 +34,21 @@ body {
   text-decoration: none;
 }
 
-header{
+nav{
   height: 80px;
-  background: black;
-  width: 100%;
   z-index: 12;
+  width: 100%;
   position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: black;
 }
 
 .logo{
   width: 30%;
   float: left;
-  line-height: 90px;
 }
 
 .logo a{
@@ -55,17 +58,33 @@ header{
   color: #ff8700;
 }
 
-nav{
-  float: right;
-  line-height: 90px;
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
 
-nav a{
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
   text-decoration: none;
   font-family: 'Tajawal', sans-serif;
   font-size: 20px;
-  margin: 0 20px 0 0;
   color: #ff8700;
+}
+
+.burger{
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: #ff8700;
+  margin: 5px;
+  transition: all 0.6s ease;
 }
 
 .banner-area{
@@ -81,7 +100,7 @@ nav a{
 }
 
 .banner-area h2{
-  padding-top: 8%;
+  padding-top: 160px;
   font-size: 70px;
   font-family: 'Tajawal', sans-serif;
   text-transform: uppercase;
@@ -135,13 +154,110 @@ nav a{
   text-decoration: none;
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1180px) {
+  .logo{
+    width: 20%;
+  }
+
+  .nav-links{
+    width: 60%;
+  }
+
+  .content-area{
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid grey;
+    padding-bottom: 30px;
+  }
+
+  .details{
+    width: 100%;
+    clear: both;
+  }
+
+  .details h3{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin: 0;
+  }
+
+  .details li{
+    padding-bottom: 30px;
+  }
+
+  .details a{
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration: none;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden
+  };
+
+  .logo{
+    width: 30%;
+    float: left;
+  }
+
   .container {
     background:white;
     font-family: 'Sacramento', cursive;
     width: 100%;
     margin: 20% auto ;
+  }
 
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 80px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+  }
+
+  .nav-links li{
+    opacity: 0;
+  }
+
+  .burger{
+    display: block;
+    cursor: pointer;
   }
   
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
 }
