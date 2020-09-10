@@ -21,14 +21,14 @@ body {
   clear: both;
 }
 
-/*
- * Containers
-*/
-
 .wrapper{
   width: 90%;
   margin: 0 auto;
 }
+
+/*
+ * Navigation bar divs
+*/
 
 .wrapper a{
   text-decoration: none;
@@ -106,6 +106,8 @@ nav{
   text-transform: uppercase;
   color: white;
 }
+
+/* Content area divs */
 
 .content-area{
   width: 80%;
