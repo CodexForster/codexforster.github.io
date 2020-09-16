@@ -234,6 +234,14 @@ nav{
     display: block;
     cursor: pointer;
   }
+
+  .banner-area{
+    height: 300px;
+  }
+
+  .banner-area h2{
+    padding-top: 80px;
+  }
   
 }
 
