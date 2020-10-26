@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
 }
 
+.wrapper2{
+  padding-top: 50px;
+  width: 60%;
+  margin: 0 auto;
+}
 /*
  * Navigation bar divs
 */
@@ -33,6 +38,11 @@ body {
 .wrapper a{
   text-decoration: none;
 }
+
+.wrapper2 a{
+  text-decoration: none;
+}
+
 
 nav{
   height: 80px;
@@ -129,6 +139,13 @@ nav{
   padding: 2% 0;
   font-family: 'Tajawal', sans-serif;
   line-height: 30px;
+}
+
+.content-area li{
+  list-style-type: disc;
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: 'Tajawal', sans-serif;
 }
 
 @media only screen and (max-width: 1180px) {
