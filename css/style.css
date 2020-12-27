@@ -20,6 +20,10 @@ body {
   clear: both;
 }
 
+a{
+  text-decoration: none;
+}
+
 /*
  * Container and footer
 */
@@ -47,26 +51,31 @@ body {
 
 footer{
   text-align: center;
+  display: inline-block;
   font-family: 'Tajawal', sans-serif;
   font-size: 20px;
-  line-height: 30px;
+  padding-top: 0.4%;
+  top: 97%;
   width: 100%;
   background-color: black;
   color: #ff8700;
-  height: 30px;
+  height: 3%;
   position: absolute;
-  bottom: 0;
 }
 
 /*
  * Button styles
 */
 button{
+  border: 3px solid black;
   width: 270px;
   height: 50px;
-  padding-top: 3px;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /*padding-top: 3px;*/
   background-color: #ff8700;
-  border: 3px solid black;
   margin-bottom: 30px;
   font-size: 30px;
   font-weight: 500;
@@ -74,20 +83,17 @@ button{
   font-family: 'Tajawal', sans-serif;
 }
 
+
 button:hover{
   background-color: black;
   border: 3px solid black;
   color: #ff8700;
 }
 
-button a{
-  text-decoration: none;
-}
-
 
 @media only screen and (max-width: 1920px) {
   button{
-    padding-top: 7px;
+    /*padding-top: 7px;*/
   }
   
 }
@@ -95,10 +101,6 @@ button a{
 @media only screen and (max-width: 768px) {
   .container {
     margin: 30% auto ;
-  }
-
-  button{
-    width: 270px;
   }
 
   .container h2 {
