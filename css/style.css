@@ -37,7 +37,7 @@ a{
 }
 
 .container{
-  margin: 15% auto;
+  margin: 7.5% auto;
   width: 320px;
   text-align: center;
   vertical-align: middle;
@@ -54,13 +54,13 @@ footer{
   display: inline-block;
   font-family: 'Tajawal', sans-serif;
   font-size: 20px;
-  padding-top: 0.4%;
+  padding-top: 0.3%;
   top: 97%;
   width: 100%;
   background-color: black;
   color: #ff8700;
   height: 3%;
-  position: absolute;
+  position:fixed;
 }
 
 /*
