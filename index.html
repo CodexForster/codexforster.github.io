@@ -55,6 +55,7 @@
       padding: 2rem;
       text-align: left;
       margin-top: 10rem;
+      margin-bottom: 5rem;
     }
 
     .profile-img {
@@ -74,16 +75,23 @@
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 6rem;
-      }
-
-      .profile-img {
-        margin: 0 0 1rem 0;
-      }
+    .main-content {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 6rem;
+      margin-bottom: 5rem; /* Add a default bottom margin */
     }
+
+    .profile-img {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-content {
+      margin-bottom: 8rem; /* Override bottom margin for very small screens */
+    }
+  }
 
     .social-links {
       display: flex;
