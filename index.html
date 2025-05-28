@@ -1,18 +1,157 @@
-<!doctype html>
-<title>Site Maintenance</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<article>
-    <br>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. (January 2025)</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 16px;
+      font-family: 'Helvetica', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #000000;
+    }
+
+    header {
+      background-color: #f9f9f9;
+      color: black;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+      box-sizing: border-box;
+      outline: 2px solid black;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff8700;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem;
+      text-align: left;
+      margin-top: 10rem;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 40%;
+      margin: 1rem;
+      flex-shrink: 0;
+    }
+
+    .description {
+      max-width: 600px;
+      margin: 1rem;
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 6rem;
+      }
+
+      .profile-img {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .github-link {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .github-logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    .github-link a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .github-link a:hover {
+      color: #ff8700;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p>Danush Shekar</p>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" />
+    <div class="description">
+      <h2>Hi there!</h2>
+      <p>
+        I am Danush Shekar, a graduate student at the University of Illinois, Chicago.
+        <br><br>With a strong passion for high-energy physics, I have been involved in building next-generation silicon detectors for future collider experiments and medical imaging, as well as studying the properties of the Higgs Boson as part of the CMS experiment at CERN. My light preoccupations include enjoying long runs and cinema.
+      </p>
+      <div class="social-links">
+        <div class="github-link">
+          <a href="https://github.com/CodexForster" target="_blank" class="github-link">
+            <img src="images/github-mark.png" alt="GitHub Logo" class="github-logo" />
+            <span>CodexForster</span>
+          </a>
+        </div>
+        <div class="github-link">
+          <a href="https://linkedin.com/in/danush-shekar/" target="_blank" class="github-link">
+            <img src="images/In-mark.png" alt="LinkedIn Logo" class="github-logo" />
+            <span>Danush Shekar</span>
+          </a>
+        </div>
+      </div>
+      <br><br>Improvements are underway, apologies for missing elements of the website.
     </div>
-</article>
+  </main>
+</body>
+
+</html>
