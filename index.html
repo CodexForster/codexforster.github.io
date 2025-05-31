@@ -12,19 +12,48 @@
       font-family: 'Helvetica', Arial, sans-serif;
       background-color: #f9f9f9;
       color: #000000;
+      position: relative;
+      min-height: 100vh;
     }
 
+    /* Sticky header on scroll */
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f9f9f9;
+      color: black;
+      padding: 0.5rem 1rem;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-sizing: border-box;
+      outline: 2px solid black;
+    }
+
+    .sticky-header .nav-links a {
+      margin-left: 1.5rem;
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sticky-header .nav-links a:hover {
+      color: #ff8700;
+    }
+
+    /* Footer nav bar for intro screen */
     header {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       background-color: #f9f9f9;
       color: black;
       padding: 0.5rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 1000;
       box-sizing: border-box;
       outline: 2px solid black;
     }
@@ -46,6 +75,17 @@
       color: #ff8700;
     }
 
+    /* Wrapper to ensure intro section takes full screen */
+    .intro-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+      position: relative;
+    }
+
     .main-content {
       display: flex;
       flex-direction: row;
@@ -54,7 +94,6 @@
       flex-wrap: wrap;
       padding: 2rem;
       text-align: left;
-      margin-top: 10rem;
       margin-bottom: 5rem;
     }
 
@@ -63,6 +102,7 @@
       height: 150px;
       object-fit: cover;
       object-position: center 28%;
+      border: 2px solid black;
       border-radius: 40%;
       margin: 1rem;
       flex-shrink: 0;
@@ -75,23 +115,23 @@
     }
 
     @media (max-width: 768px) {
-    .main-content {
-      flex-direction: column;
-      text-align: center;
-      margin-top: 6rem;
-      margin-bottom: 5rem; /* Add a default bottom margin */
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .profile-img {
+        margin: 0 0 1rem 0;
+      }
     }
 
-    .profile-img {
-      margin: 0 0 1rem 0;
+    @media (max-width: 480px) {
+      .main-content {
+        margin-bottom: 4rem;
+      }
     }
-  }
-
-  @media (max-width: 480px) {
-    .main-content {
-      margin-bottom: 8rem; /* Override bottom margin for very small screens */
-    }
-  }
 
     .social-links {
       display: flex;
@@ -122,44 +162,111 @@
     .github-link a:hover {
       color: #ff8700;
     }
+
+    /* Section placeholders */
+    section {
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #cv {
+      border: 2px solid black;
+      margin-top: 4rem;
+    }
+
+    #contact {
+      border: 2px solid black;
+      margin-top: 4rem;
+      margin-bottom: 5rem; /* Extra space below contact section */
+    }
+
+    .contact-link a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .contact-link a:hover {
+      color: #ff8700;
+    }
   </style>
 </head>
 
 <body>
-  <header>
+
+  <!-- Sticky header shown only after scrolling -->
+  <div class="sticky-header" id="sticky-header">
     <p>Danush Shekar</p>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
 
-  <main class="main-content">
-    <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" />
-    <div class="description">
-      <h2>Hi there!</h2>
-      <p>
-        I am Danush Shekar, a graduate student at the University of Illinois, Chicago.
-        <br><br>With a strong passion for high-energy physics, I have been involved in building next-generation silicon detectors for future collider experiments and medical imaging, as well as studying the properties of the Higgs Boson as part of the CMS experiment at CERN. My light preoccupations include enjoying long runs and cinema.
-      </p>
-      <div class="social-links">
-        <div class="github-link">
-          <a href="https://github.com/CodexForster" target="_blank" class="github-link">
-            <img src="images/github-mark.png" alt="GitHub Logo" class="github-logo" />
-            <span>CodexForster</span>
-          </a>
+  <!-- Intro section with footer-style header at bottom -->
+  <div class="intro-wrapper">
+    <main class="main-content">
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img" />
+      <div class="description">
+        <h2>Hi there!</h2>
+        <p>
+          I am Danush Shekar, a graduate student at the University of Illinois, Chicago.
+          <br><br>Driven by a strong passion for high-energy physics, I aim to contribute to advancing next-generation silicon detectors for future collider experiments and medical imaging, while studying the Higgs Boson's properties through the CMS experiment at CERN.
+        </p>
+        <div class="social-links">
+          <div class="github-link">
+            <a href="https://github.com/CodexForster" target="_blank" class="github-link">
+              <img src="images/github-mark.png" alt="GitHub Logo" class="github-logo" />
+              <span>CodexForster</span>
+            </a>
+          </div>
+          <div class="github-link">
+            <a href="https://linkedin.com/in/danush-shekar/" target="_blank" class="github-link">
+              <img src="images/In-mark.png" alt="LinkedIn Logo" class="github-logo" />
+              <span>Danush Shekar</span>
+            </a>
+          </div>
         </div>
-        <div class="github-link">
-          <a href="https://linkedin.com/in/danush-shekar/" target="_blank" class="github-link">
-            <img src="images/In-mark.png" alt="LinkedIn Logo" class="github-logo" />
-            <span>Danush Shekar</span>
-          </a>
-        </div>
+        <br><br>Improvements are underway. Apologies for any missing elements.
       </div>
-      <br><br>Improvements are underway, apologies for missing elements of the website.
+    </main>
+
+    <!-- Visible footer-style navbar -->
+    <header>
+      <p>Danush Shekar</p>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Scroll sections -->
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Coming soon!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-link">
+      Email: <a href="mailto:dsheka3@uic.edu" class="contact-link">dsheka3@uic.edu</a>
     </div>
-  </main>
+  </section>
+
+  <script>
+    const stickyHeader = document.getElementById("sticky-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight * 0.8) {
+        stickyHeader.style.display = "flex";
+      } else {
+        stickyHeader.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>
