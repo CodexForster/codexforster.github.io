@@ -95,6 +95,7 @@
       padding: 2rem;
       text-align: left;
       margin-bottom: 5rem;
+      line-height: 1.2;
     }
 
     .profile-img {
@@ -165,7 +166,7 @@
 
     /* Section placeholders */
     section {
-      padding: 5rem 2rem;
+      padding: 3rem 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -173,6 +174,22 @@
     #cv {
       border: 2px solid black;
       margin-top: 4rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* #cv:hover {
+      border-color: #ff8700;
+    } */
+
+    .cv-link a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+    
+    .cv-link a:hover {
+      color: #ff8700;
     }
 
     #contact {
@@ -229,7 +246,7 @@
             </a>
           </div>
         </div>
-        <br><br>Improvements are underway. Apologies for any missing elements.
+        <!-- <br><br>Improvements are underway. Apologies for any missing elements. -->
       </div>
     </main>
 
@@ -245,15 +262,17 @@
   </div>
 
   <!-- Scroll sections -->
-  <section id="cv">
-    <h2>CV</h2>
-    <p>Coming soon!</p>
-  </section>
+    <section id="cv">
+      <div class="cv-link">
+        <!-- <h2>CV</h2> -->
+        Here's a <a class="cv-link" href="files/danush_resume.pdf" target="_blank" rel="noopener">link</a> to my CV!
+      </div>
+    </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <!-- <h2>Contact</h2> -->
     <div class="contact-link">
-      Email: <a href="mailto:dsheka3@uic.edu" class="contact-link">dsheka3@uic.edu</a>
+      Email: <a href="mailto:dsheka3@uic.edu" class="contact-link">dsheka3@uic.edu</a> / <a href="mailto:danush.shekar@cern.ch" class="contact-link">danush.shekar@cern.ch</a> 
     </div>
   </section>
 
